@@ -76,7 +76,7 @@ export default function App() {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-[100] transition-all duration-500" id="main-nav">
+      <nav aria-label="Hauptnavigation" className="fixed top-0 w-full z-[100] transition-all duration-500" id="main-nav">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-4 flex justify-between items-center">
       <div className="flex items-center gap-4">
       <img alt="Papa's Döner Logo" className="h-14 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbl9jXSNxDJK-8xHY_jrJ5LV95L6pyab5bvX5uua0wkPyw-41sUU7onjxcJypBo788YbqywwVtIpPXHWIZuTRNWDx1obRm5jfRQ1VeR5dWSb_V_Q5AKSw8FA4APac3X1sg8Jfz1cTEVAOs5dYpupZnaCfnK5JBEosIpsK2_ZRef5JX0UZaNmMl_5_ChrXTZPtIi3RV8mY_tPwkiCdFsVgFx9sRXFofEyaZPRPqb7N2g-FjaXDO8lm-r4UIaZTm-KYJLDBP3fRQ6Oo"/>
@@ -87,11 +87,12 @@ export default function App() {
       <a className="text-label-sm font-label-sm hover:text-secondary-fixed transition-colors tracking-widest" href="#craft">THE CRAFT</a>
       <a className="text-label-sm font-label-sm hover:text-secondary-fixed transition-colors tracking-widest" href="#menu">MENU</a>
       <a className="text-label-sm font-label-sm hover:text-secondary-fixed transition-colors tracking-widest" href="#location">LOCATIONS</a>
-      <button className="bg-white text-black px-8 py-3 text-label-sm font-label-sm tracking-widest hover:bg-secondary-container hover:text-white transition-all">RESERVATION</button>
+      <a className="bg-white text-black px-8 py-3 text-label-sm font-label-sm tracking-widest hover:bg-secondary-container hover:text-white transition-all" href="#location">STANDORT</a>
       </div>
       </div>
       </nav>
       
+      <main>
       <header className="relative h-screen min-h-[800px] flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
       <img alt="The Legend Returns" className="w-full h-full object-cover parallax-bg" id="hero-bg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL-e4104-PJx9whb2yk2eH4R--esXpNjrJJJkphCcwVO_ovyY6VrWQI-mbw4Z-Bo658oR9UUY3sv1GmTW4lsw2LPAEo_FU2ffeIbR6n-U7L8WLV0ZJkzHA-cVkOHKF1gTmxh4LUCvDRrDdVa-WKR4ppvbvzi7XKjOyqTfGoaKpcqTBc6xSPz74vlOBz8onoeHv_d2V-U-aSiQWgYmmBmdX5PMDsf57YGUSoBd1KJ5TMoPhv_pzaUU0a5VpI6fLMUPagdNBx9KLy90"/>
@@ -113,8 +114,8 @@ export default function App() {
                       Nach drei Jahrzehnten kehrt der Pionier des Stuttgarter Premium-Fleisches zurück. Papa's Döner – wo Geschichte auf die Zukunft der Kulinarik trifft.
                   </p>
       <div className="flex flex-col sm:flex-row gap-6">
-      <button className="bg-[#e63946] text-white px-12 py-5 font-label-sm tracking-widest transition-all hover:brightness-110 active:scale-95 uppercase">DIE GESCHICHTE ERLEBEN</button>
-      <button className="border border-white/30 text-white px-12 py-5 font-label-sm tracking-widest transition-all hover:bg-white hover:text-black active:scale-95 uppercase">UNSERE PHILOSOPHIE</button>
+      <a className="bg-[#e63946] text-white px-12 py-5 font-label-sm tracking-widest transition-all hover:brightness-110 active:scale-95 uppercase" href="#story">DIE GESCHICHTE ERLEBEN</a>
+      <a className="border border-white/30 text-white px-12 py-5 font-label-sm tracking-widest transition-all hover:bg-white hover:text-black active:scale-95 uppercase" href="#craft">UNSERE PHILOSOPHIE</a>
       </div>
       </div>
       </div>
@@ -266,7 +267,7 @@ export default function App() {
       <p className="text-on-surface-variant text-sm">Vollkorn-Variante mit hausgemachtem Seitan und Cashew-Creme.</p>
       </li>
       </ul>
-      <button className="mt-16 w-full md:w-fit bg-[#e63946] text-white px-16 py-5 font-label-sm tracking-widest transition-all hover:scale-105 uppercase">KOMPLETTE KARTE</button>
+      <a className="mt-16 w-full md:w-fit bg-[#e63946] text-white px-16 py-5 font-label-sm tracking-widest transition-all hover:scale-105 uppercase" href="#menu">KOMPLETTE KARTE</a>
       </div>
       </div>
       </div>
@@ -329,24 +330,25 @@ export default function App() {
                   </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
       <div className="flex items-start gap-5">
-      <span className="material-symbols-outlined text-secondary text-3xl">location_on</span>
+      <span aria-hidden="true" className="material-symbols-outlined text-secondary text-3xl">location_on</span>
       <div>
       <h4 className="text-white font-bold mb-1 uppercase tracking-widest text-xs">Adresse</h4>
       <p className="text-on-surface-variant font-body-md">Schwabenplatz 1<br/>70563 Stuttgart</p>
       </div>
       </div>
       <div className="flex items-start gap-5">
-      <span className="material-symbols-outlined text-secondary text-3xl">event</span>
+      <span aria-hidden="true" className="material-symbols-outlined text-secondary text-3xl">event</span>
       <div>
       <h4 className="text-white font-bold mb-1 uppercase tracking-widest text-xs">Opening 2026</h4>
       <p className="text-on-surface-variant font-body-md">Wir bereiten alles vor.<br/>Folgen Sie uns für Updates.</p>
       </div>
       </div>
       </div>
-      <button className="bg-white text-black px-16 py-5 font-label-sm tracking-widest transition-all hover:bg-secondary hover:text-on-secondary uppercase">UPDATE ERHALTEN</button>
+      <a className="bg-white text-black px-16 py-5 font-label-sm tracking-widest transition-all hover:bg-secondary hover:text-on-secondary uppercase" href="#location">STANDORT ANSEHEN</a>
       </div>
       </div>
       </section>
+      </main>
       
       <footer className="bg-surface-container-lowest border-t border-white/5 py-24">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
@@ -359,14 +361,7 @@ export default function App() {
       <p className="text-on-surface-variant max-w-sm mb-8 leading-relaxed">
                           Legendäre Steak-Meat Tradition seit 1996. Wir sind zurück, um Stuttgart das Döner-Erlebnis zu geben, das es verdient.
                       </p>
-      <div className="flex gap-6">
-      <a className="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-secondary transition-colors" href="#">
-      <span className="material-symbols-outlined text-xl">share</span>
-      </a>
-      <a className="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-secondary transition-colors" href="#">
-      <span className="material-symbols-outlined text-xl">camera</span>
-      </a>
-      </div>
+      <p className="text-[10px] uppercase tracking-[0.2em] opacity-40">Diese Website enthält KI-generierte Inhalte.</p>
       </div>
       <div>
       <h5 className="text-label-sm tracking-widest uppercase text-white mb-8">History</h5>
@@ -381,8 +376,7 @@ export default function App() {
       <h5 className="text-label-sm tracking-widest uppercase text-white mb-8">Kontakt</h5>
       <ul className="space-y-4">
       <li className="text-on-surface-variant">heritage@papasdoener.de</li>
-      <li className="text-on-surface-variant">+49 (0) 711 Legend</li>
-      <li className=""><a className="text-secondary hover:underline transition-colors font-label-sm" href="#">Impressum &amp; Datenschutz</a></li>
+      <li className=""><a className="text-secondary hover:underline transition-colors font-label-sm" href="/impressum.html">Impressum</a> <span className="opacity-40">·</span> <a className="text-secondary hover:underline transition-colors font-label-sm" href="/datenschutz.html">Datenschutz</a></li>
       </ul>
       </div>
       </div>
